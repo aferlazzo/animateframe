@@ -1,0 +1,45 @@
+body{
+	font-family: sans-serif;
+
+}
+label{
+	display: inline-block;
+}
+#imageStackName {
+	border: 0;
+	margin: -16px 0 0 154px;
+	width: 142px;
+	display: inherit;
+}
+#imageStackName:focus {
+	outline: 0;
+}
+.svgContainer{
+	margin: 0;
+	width: 325px;
+}
+.formContainer {
+	position:relative;
+	top:-43px;
+	width:325px;
+	height:40px;
+}
+.buttonContainer {
+	position: relative;
+	top: -86px;
+	left: 325px;
+}
+.drawBorder {
+	-webkit-animation: shift-w 4s infinite;
+	-moz-animation: shift-m 4s infinite;
+}
+@-webkit-keyframes shift-w {
+	50% {
+		stroke-dashoffset: 375px;
+	}
+}
+@-moz-keyframes shift-m {
+	50% {
+		stroke-dashoffset: 375px;
+	}
+}

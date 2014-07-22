@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animate Text Input Borders</title>
+	<link rel = "stylesheet" href = "style.css">
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>SVG Fun</h1>
+<p>
+	Start Button begins rotating the input field border. Stop Button halts the rotating. Focusing in the Image Stack
+	Name field also causes the rotating pattern to stop.
+</p>
+<!--
+The path element has 3 really interesting instructions:
+moveto (Mx,y) : The "Move To" command appears at the beginning of paths to specify where the drawing should start.
+lineto (Lx,y) : The "Line To" command takes two parameters, an x and a y coordinate, and draws a line from your current
+position to the second one. There are two abbreviated forms for this when you're just drawing a horizontal or vertical
+line. H, draws a horizontal line, and V draws a vertical one. Both of them only take one argument since they only move
+in one direction.
+closepath (z).
+
+<g> The g element is a container used to group objects.
+-->
+<div class="svgContainer">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+		 width="325px" height="50px">
+		<!--
+			the drawBorder class is added to this element to enable the svg property 'stroke-dashoffset'
+			to be added to the path element
+		-->
+		<path class="svgBorder" fill="none" stroke="#aaa"
+			  stroke-width="1" stroke-linecap="square" stroke-linejoin="round"
+			  stroke-dasharray="375,375"
+			  d="M 151 11 H 301 V 33 H 151 v -22"></path>
+	</svg>
+</div>
+
+<div class='formContainer'>
+	<label for="imageStackName">Image Stack Name</label>
+	<input type="text" id="imageStackName" tabindex="1">
+</div>
+<div class="buttonContainer">
+	<button class="startBtn" tabindex="2">Start</button>
+	<button class="stopBtn" tabindex="3">Stop</button>
+</div>
+<script src="animateFrame.js"></script>
+</body>
+</html>
+
+
